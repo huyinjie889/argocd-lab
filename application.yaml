@@ -2,18 +2,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application
+  name: duyan-cti
   namespace: argocd
 spec:
-  project: default
+  project: duyan
 
   source:
-    repoURL: https://github.com/yangchuansheng/argocd-lab.git
+    repoURL: https://github.com/huyinjie889/argocd-lab.git
     targetRevision: HEAD
     path: dev
   destination: 
     server: https://kubernetes.default.svc
-    namespace: myapp
+    namespace: duyan
 
   syncPolicy:
     syncOptions:
