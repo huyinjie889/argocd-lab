@@ -5,7 +5,7 @@ metadata:
   name: duyan-cti
   namespace: argocd
 spec:
-  project: duyan
+  project: default
 
   source:
     repoURL: https://github.com/huyinjie889/argocd-lab.git
