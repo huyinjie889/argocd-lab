@@ -9,8 +9,8 @@ spec:
 
   source:
     repoURL: https://github.com/huyinjie889/argocd-lab.git
-    targetRevision: HEAD
-    path: dev
+    targetRevision: dev
+    path: duyan-cti
   destination: 
     server: https://kubernetes.default.svc
     namespace: local-test
