@@ -1,11 +1,21 @@
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
-  name: myapp-service
+  name: java-cti
+  namespace: local-test
+  labels:
+    app: java-cti
 spec:
-  selector:
-    app: myapp
   ports:
-  - port: 80
-    protocol: TCP
-    targetPort: 80
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: java-cti
+  type: ClusterIP
+  sessionAffinity: None
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  internalTrafficPolicy: Cluster
